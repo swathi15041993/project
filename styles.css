@@ -1,0 +1,228 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2c5282;
+  --accent-color: #48bb78;
+  --background-color: #f8fafc;
+  --text-color: #2d3748;
+  --muted-color: #718096;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.main-container {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.job-info-card {
+  position: sticky;
+  top: 20px;
+}
+
+#roadmap {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#flowchart {
+  min-height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  padding: 20px;
+}
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.mermaid .node rect {
+  rx: 8px;
+  ry: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.mermaid .node rect:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transform: translateY(-2px);
+}
+
+.mermaid .node text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.mermaid .edgePath path {
+  stroke: var(--muted-color);
+  stroke-width: 2px;
+  marker-end: url(#arrowhead);
+}
+
+.mermaid .edgeLabel {
+  background-color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--muted-color);
+}
+
+/* Node type styles */
+.mermaid .node.default rect {
+  fill: var(--primary-color);
+  stroke: var(--secondary-color);
+}
+
+.mermaid .node.milestone rect {
+  fill: var(--secondary-color);
+  stroke: #1a365d;
+}
+
+.mermaid .node.current rect {
+  fill: var(--accent-color);
+  stroke: #2f855a;
+}
+
+.mermaid .node.future rect {
+  fill: #e2e8f0;
+  stroke: #cbd5e0;
+}
+
+/* Form styles */
+.form-select {
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Badge styles */
+.badge {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+#skills-list .badge {
+  background-color: #e2e8f0;
+  color: var(--text-color);
+}
+
+.salary-badge .badge {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+  
+  #roadmap, #flowchart {
+    min-height: 300px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .mermaid .node text {
+    font-size: 12px;
+  }
+}
+
+.vis-item {
+  border-radius: 4px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vis-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.vis-item.vis-selected {
+  background-color: #2c5282;
+}
+
+.vis-time-axis .vis-text {
+  color: #666;
+  font-size: 12px;
+}
+
+.vis-panel.vis-center {
+  border-color: #e2e8f0;
+}

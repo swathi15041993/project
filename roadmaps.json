@@ -1,0 +1,23 @@
+{
+  "software engineer": [
+    { "stepId": 1, "title": "Programming Basics", "description": "Variables, loops, functions", "startDate": "2025-05-01", "endDate": "2025-05-31" },
+    { "stepId": 2, "title": "Data Structures",    "description": "Arrays, Trees, Graphs",    "startDate": "2025-06-01", "endDate": "2025-06-30" },
+    { "stepId": 3, "title": "Algorithms",         "description": "Sorting, Searching",     "startDate": "2025-07-01", "endDate": "2025-07-31" }
+  ],
+  "data scientist": [
+    { "stepId": 1, "title": "Python for Data",  "description": "NumPy, Pandas",         "startDate": "2025-05-01", "endDate": "2025-05-20" },
+    { "stepId": 2, "title": "Statistics",       "description": "Probability, Hypothesis", "startDate": "2025-05-21", "endDate": "2025-06-10" }
+  ],
+  "demo branching": [
+    { "id": "A", "label": "Christmas", "next": [{ "id": "B", "label": "Get money" }] },
+    { "id": "B", "label": "Go shopping", "next": [{ "id": "C" }] },
+    { "id": "C", "label": "Let me think", "next": [
+      { "id": "D", "label": "One" },
+      { "id": "E", "label": "Two" },
+      { "id": "F", "label": "Three" }
+    ] },
+    { "id": "D", "label": "Laptop" },
+    { "id": "E", "label": "iPhone" },
+    { "id": "F", "label": "Car" }
+  ]
+}
